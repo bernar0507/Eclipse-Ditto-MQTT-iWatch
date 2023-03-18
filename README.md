@@ -16,7 +16,7 @@ docker compose up -d
 
 ### Mosquitto: 
 ```
-docker run -it --name mosquitto --network docker_default -p 1883:1883 -v $(pwd)/docker-mosquitto3/mosquitto:/mosquitto/ eclipse-mosquitto
+docker run -it --name mosquitto --network docker_default -p 1883:1883 -v $(pwd)/mosquitto:/mosquitto/ eclipse-mosquitto
 ```
 
 # Create the Policy
