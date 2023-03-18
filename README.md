@@ -4,6 +4,7 @@ This example presents how to configure Ditto to be able update things and receiv
 # Requirements
 1. Clone Ditto
 2. Clone Mosquitto
+3. Clone Eclipse-Ditto-MQTT-iWatch
 
 # Start Ditto and Mosquitto
 
