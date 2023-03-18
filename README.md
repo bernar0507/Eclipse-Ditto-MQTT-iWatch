@@ -5,6 +5,20 @@ This example presents how to configure Ditto to be able update things and receiv
 1. Clone Ditto
 2. Clone Mosquitto
 
+# Start Ditto and Mosquitto
+
+### Ditto: 
+```
+cd ditto-3.0.0/deployment/docker
+
+docker compose up -d
+```
+
+### Mosquitto: 
+````
+docker run -it --name mosquitto --network docker_default -p 1883:1883 -v $(pwd)/docker-mosquitto3/mosquitto:/mosquitto/ eclipse-mosquitto
+```
+
 # Create the Policy
 ```
 curl -X PUT 'http://localhost:8080/api/2/policies/org.Iotp2c:policy' -u 'ditto:ditto' -H 'Content-Type: application/json' -d '{
