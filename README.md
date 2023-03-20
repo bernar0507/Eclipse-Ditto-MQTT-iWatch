@@ -12,7 +12,7 @@ This example presents how to configure Ditto to be able update things and receiv
 
 ### Ditto: 
 ```
-cd ditto-3.0.0/deployment/docker
+cd ditto/deployment/docker
 
 docker compose up -d
 ```
