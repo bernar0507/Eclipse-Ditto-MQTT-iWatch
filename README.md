@@ -3,10 +3,15 @@ This example presents how to configure Ditto to be able update things and receiv
 
 # Requirements
 1. Clone Ditto
+
 ```git clone https://github.com/eclipse-ditto/ditto.git```
+
 2. Clone Mosquitto
+
 ```git clone https://github.com/eclipse/mosquitto.git```
+
 3. Clone Eclipse-Ditto-MQTT-iWatch
+
 ```git clone https://github.com/bernar0507/Eclipse-Ditto-MQTT-iWatch.git```
 
 # Start Ditto and Mosquitto
