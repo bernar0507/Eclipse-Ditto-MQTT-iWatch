@@ -185,7 +185,6 @@ Ditto-Protocol format (in the send_data_iwatch.py):
     }
 ```
 
-:
 
 `topic`: This is the topic to which the message will be published. In this case, the topic is "org.Iotp2c/iwatch/things/twin/commands/modify", which suggests that the message is intended to modify a twin (digital representation) of an iWatch device in an IoT platform.
 
