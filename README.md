@@ -107,7 +107,7 @@ curl -X POST \
             "connectionType": "mqtt",
             "connectionStatus": "open",
             "failoverEnabled": true,
-            "uri": "tcp://ditto:ditto@172.22.0.10:1883",
+            "uri": "tcp://ditto:ditto@IP_ADDRESS_MQTT:1883",
             "sources": [{
                 "addresses": ["org.Iotp2c:iwatch/things/twin/commands/modify"],
                 "authorizationContext": ["nginx:ditto"],
