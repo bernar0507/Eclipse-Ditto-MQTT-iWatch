@@ -2,17 +2,11 @@
 This example presents how to configure Ditto to be able update things and receive notification about changes via MQTT. In this example we will create a iWatch (thing) in Ditto, it will be updated via MQTT, we will update the Digital Twin in Ditto via MQTT.
 
 # Requirements
-1. Clone Ditto
+1. Clone Ditto: ```git clone https://github.com/eclipse-ditto/ditto.git```
 
-```git clone https://github.com/eclipse-ditto/ditto.git```
+2. Clone Mosquitto: ```git clone https://github.com/eclipse/mosquitto.git```
 
-2. Clone Mosquitto
-
-```git clone https://github.com/eclipse/mosquitto.git```
-
-3. Clone Eclipse-Ditto-MQTT-iWatch
-
-```git clone https://github.com/bernar0507/Eclipse-Ditto-MQTT-iWatch.git```
+3. Clone Eclipse-Ditto-MQTT-iWatch: ```git clone https://github.com/bernar0507/Eclipse-Ditto-MQTT-iWatch.git```
 
 # Start Ditto and Mosquitto
 
