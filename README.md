@@ -89,9 +89,14 @@ curl -X PUT 'http://localhost:8080/api/2/things/org.Iotp2c:iwatch' -u 'ditto:dit
 
 # Create a MQTT Connection
 We need to get the Mosquitto Ip adress from the container running mosquitto. 
-For that we need to use:
+For that we need to use this to get the container id:
+```
+docker ps
 ```
 
+After that we can get into the shell of the container:
+```
+docker exec -it CONTAINER_ID sh
 ```
 
 After we get inside the container's shell we use the following command to retrieve the IP_ADRESS needed for when we create the connection, and for the send_data_iwatch.py`:
