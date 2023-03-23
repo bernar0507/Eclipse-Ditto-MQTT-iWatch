@@ -1,0 +1,45 @@
+{
+  "@context": "https://www.w3.org/2019/wot/td/v1",
+  "id": "urn:dev:wot:iwatch",
+  "name": "iwatch",
+  "securityDefinitions": {
+    "basic": {
+      "scheme": "basic",
+      "in": "header"
+    }
+  },
+  "security": [
+    "basic"
+  ],
+  "properties": {
+    "vital_signs": {
+      "type": "object",
+      "properties": {
+        "heart_rate": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "timestamp": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "longitude": {
+          "type": "number"
+        },
+        "latitude": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}
