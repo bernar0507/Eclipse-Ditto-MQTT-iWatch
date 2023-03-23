@@ -12,8 +12,18 @@ This example presents how to configure Ditto to be able update things and receiv
 
 ### Ditto: 
 ```
-cd ditto/deployment/docker
+cd ditto
+```
 
+```
+git checkout tags/3.0.0
+```
+
+```
+cd ditto/deployment/docker
+```
+
+```
 docker compose up -d
 ```
 
