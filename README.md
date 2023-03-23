@@ -180,7 +180,7 @@ Depending on your IoT-Device, you may have to map the payload that you send to E
 In this case, the function that simulates the data generated from an iWatch sends a dictionary with the data from iWatch.
 After that we will map this payload so it is according to the Ditto-Protocol format.
 
-Ditto-Protocol format (in the send_data_iwatch.py):
+Ditto-Protocol format (in the `send_data_iwatch.py`):
 ```
     ditto_data = {
         "topic": "org.Iotp2c/iwatch/things/twin/commands/modify",
