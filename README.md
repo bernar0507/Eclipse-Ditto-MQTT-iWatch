@@ -109,7 +109,7 @@ After that we can get into the shell of the container:
 docker exec -it CONTAINER_ID sh
 ```
 
-After we get inside the container's shell we use the following command to retrieve the IP_ADRESS needed for when we create the connection, and for the send_data_iwatch.py`:
+After we get inside the container's shell we use the following command to retrieve the IP_ADRESS needed for when we create the connection, and for the `send_data_iwatch.py`:
 ```
 ip address show
 ```
