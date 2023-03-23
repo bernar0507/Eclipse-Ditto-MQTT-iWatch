@@ -1,72 +1,43 @@
 {
   "@context": "https://www.w3.org/2019/wot/td/v1",
   "id": "urn:dev:wot:iwatch",
-  "name": "iwatch",
   "securityDefinitions": {
     "basic": {
-      "scheme": "basic",
-      "in": "header"
+      "in": "header",
+      "scheme": "basic"
     }
   },
-  "security": [
-    "basic"
-  ],
   "properties": {
-    "vital_signs": {
-      "type": "object",
-      "properties": {
-        "heart_rate": {
-          "type": "number",
-          "minimum": 0
-        }
-      }
-    },
-    "timestamp": {
-      "type": "object",
-      "properties": {
-        "value": {
-          "type": "string",
-          "format": "date-time"
-        }
-      }
-    },
     "location": {
-      "type": "object",
       "properties": {
-        "longitude": {
-          "type": "number"
-        },
         "latitude": {
           "type": "number"
+        },
+        "longitude": {
+          "type": "number"
         }
-      }
+      },
+      "type": "object"
+    },
+    "timestamp": {
+      "properties": {
+        "value": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "vital_signs": {
+      "properties": {
+        "heart_rate": {
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "type": "object"
     }
   },
-  "actions": {
-    "create_digital_twin": {
-      "input": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "type"
-        ]
-      },
-      "output": {
-        "type": "object",
-        "properties": {
-          "result": {
-            "type": "string"
-          }
-        }
-      }
-    }
-  }
+  "security": "basic",
+  "name": "iwatch"
 }
