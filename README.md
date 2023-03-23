@@ -109,13 +109,13 @@ After that we can get into the shell of the container:
 docker exec -it CONTAINER_ID sh
 ```
 
-After we get inside the container's shell we use the following command to retrieve the IP_ADRESS needed for when we create the connection, and for the `send_data_iwatch.py`:
+After we get inside the container's shell we use the following command to retrieve the `IP_ADRESS` needed for when we create the connection, and for the `send_data_iwatch.py`:
 ```
 ip address show
 ```
-The IP_ADRESS is listed under interface "eth0" with the "inet" label and subnet mask.
+The `IP_ADRESS` is listed under interface "eth0" with the "inet" label and subnet mask.
 
-Before we can use MQTT, we have to open a MQTT connection in Eclipse Ditto. We can do this by using DevOps Commands. In this case we need the Piggyback Commands to open a new connection (dont forget to change the IP_ADDRESS_MQTT for the Ip address you retrieved from your container).
+Before we can use MQTT, we have to open a MQTT connection in Eclipse Ditto. We can do this by using DevOps Commands. In this case we need the Piggyback Commands to open a new connection (dont forget to change the `IP_ADDRESS_MQTT` for the Ip address you retrieved from your container).
 To use these commands we have to send a `POST Request` to the URL `http://localhost:8080/devops/piggyback/connectivity?timeout=10`.
 
 ## Create the connection:
