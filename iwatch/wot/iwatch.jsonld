@@ -31,7 +31,8 @@
     "vital_signs": {
       "properties": {
         "heart_rate": {
-          "minimum": 0,
+          "minimum": 60,
+          "maximum":100,
           "type": "number"
         }
       },
