@@ -2,14 +2,23 @@
     "@context": [
         "https://www.w3.org/2022/wot/td/v1.1"
     ],
-    "@type": ["tm:iwatch"],
+    "@type": [
+        "tm:iwatch"
+    ],
     "title": "iWatch",
     "description": "A smartwatch with vital signs, timestamp, and location features.",
     "version": {
         "model": "1.0.0",
         "instance": "1.0.0"
     },
-    "links": [],
+    "links": [
+        {
+            "rel": "tm:ThingModel",
+            "href": "https://github.com/bernar0507/Eclipse-Ditto-MQTT-iWatch/blob/main/iwatch/wot/iwatch.tm.jsonld",
+            "type": "application/tm+json",
+            "instanceName": "Spot1"
+        }
+    ],
     "tm:optional": [],
     "properties": {
         "heart_rate": {
