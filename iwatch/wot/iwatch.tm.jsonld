@@ -16,7 +16,7 @@
             "rel": "tm:ThingModel",
             "href": "https://github.com/bernar0507/Eclipse-Ditto-MQTT-iWatch/blob/main/iwatch/wot/iwatch.tm.jsonld",
             "type": "application/tm+json",
-            "instanceName": "Spot1"
+            "instanceName": "iWatch"
         }
     ],
     "tm:optional": [],
@@ -27,11 +27,6 @@
             "type": "number",
             "minimum": 60,
             "observable": true,
-            "forms": [
-                {
-                    "href": "https://github.com/bernar0507/Eclipse-Ditto-MQTT-iWatch/blob/main/iwatch/wot/iwatch.tm.jsonld"
-                }
-            ],
             "readOnly": false,
             "writeOnly": false
         },
@@ -42,11 +37,6 @@
             "format": "date-time",
             "default": "1970-01-01T00:00:00.000Z",
             "observable": true,
-            "forms": [
-                {
-                    "href": "https://github.com/bernar0507/Eclipse-Ditto-MQTT-iWatch/blob/main/iwatch/wot/iwatch.tm.jsonld"
-                }
-            ],
             "readOnly": false,
             "writeOnly": false
         },
@@ -56,11 +46,6 @@
             "type": "number",
             "default": 0,
             "observable": true,
-            "forms": [
-                {
-                    "href": "https://github.com/bernar0507/Eclipse-Ditto-MQTT-iWatch/blob/main/iwatch/wot/iwatch.tm.jsonld"
-                }
-            ],
             "readOnly": false,
             "writeOnly": false
         },
@@ -70,11 +55,6 @@
             "type": "number",
             "default": 0,
             "observable": true,
-            "forms": [
-                {
-                    "href": "https://github.com/bernar0507/Eclipse-Ditto-MQTT-iWatch/blob/main/iwatch/wot/iwatch.tm.jsonld"
-                }
-            ],
             "readOnly": false,
             "writeOnly": false
         }
