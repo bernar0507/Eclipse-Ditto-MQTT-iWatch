@@ -3,7 +3,7 @@
         "https://www.w3.org/2022/wot/td/v1.1"
     ],
     "@type": [
-        "tm:iwatch"
+        "tm:ThingModel"
     ],
     "title": "iWatch",
     "description": "A smartwatch with vital signs, timestamp, and location features.",
