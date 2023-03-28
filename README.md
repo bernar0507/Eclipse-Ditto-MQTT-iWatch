@@ -166,30 +166,15 @@ Ditto-Protocol format (in the `send_data_iwatch.py`):
     ditto_data = {
         "topic": "org.Iotp2c/iwatch/things/twin/commands/modify",
         "path": "/",
-        "value": {
-            "thingId": "org.Iotp2c:iwatch",
-            "policyId": "org.Iotp2c:policy",
-            "attributes": {
-                "name": "iwatch",
-                "type": "iwatch"
-            },
-            "features": {
-                "vital_signs": {
-                    "properties": {
-                        "heart_rate": iwatch_data['heart_rate']
-                    }
-                },
-                "timestamp": {
-                    "properties": {
-                        "value": iwatch_data['timestamp']
-                    }
-                },
-                "location": {
-                    "properties": {
-                        "longitude": iwatch_data['longitude'],
-                        "latitude": iwatch_data['latitude']
-                    }
-                }
+        "value":{
+          "thingId":"org.Iotp2c:iwatch",
+          "policyId":"org.Iotp2c:policy",
+          "definition":"https://raw.githubusercontent.com/bernar0507/Eclipse-Ditto-MQTT-iWatch/main/iwatch/wot/iwatch.tm.jsonld",
+            "attributes":{
+              "heart_rate":iwatch_data['heart_rate'],
+              "timestamp":iwatch_data['timestamp'],
+              "longitude":iwatch_data['longitude'],
+              "latitude":iwatch_data['latitude']
             }
         }
     }
