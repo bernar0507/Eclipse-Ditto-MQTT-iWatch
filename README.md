@@ -180,7 +180,6 @@ ditto_data = {
 }
 ```
 
-
 `topic`: This is the topic to which the message will be published. In this case, the topic is "org.Iotp2c/iwatch/things/twin/commands/modify", which suggests that the message is intended to modify a twin (digital representation) of an iWatch device in an IoT platform.
 
 `path`: This is the path within the twin where the value will be updated. In this case, the path is "/", indicating that the value should be updated at the root level of the iWatch twin.
@@ -191,15 +190,9 @@ ditto_data = {
 
 `policyId`: This is the identifier of the policy that governs the access control of the iWatch device. In this example, the policyId is "org.Iotp2c:policy".
 
-`attributes`: This is a dictionary of key-value pairs that represent metadata about the iWatch device. In this example, the attributes include the device name ("iwatch") and type ("iwatch").
+`definition`: This is a URI referencing the JSON-LD file that contains the Thing Model for the iWatch device. In this example, the definition is "https://raw.githubusercontent.com/bernar0507/Eclipse-Ditto-MQTT-iWatch/main/iwatch/wot/iwatch.tm.jsonld".
 
-`features`: This is a dictionary that represents the features of the iWatch device. Each feature contains properties that describe its current state. In this example, the features include "vital_signs", "timestamp", and "location".
-
-- `vital_signs`: This feature describes the vital signs data of the iWatch device. In this example, the feature contains a "properties" dictionary that includes the heart rate data retrieved from the iwatch_data variable.
-
-- `timestamp`: This feature describes the timestamp of the data retrieved from the iWatch device. In this example, the feature contains a "properties" dictionary that includes the timestamp data retrieved from the iwatch_data variable.
-
-- `location`: This feature describes the location data of the iWatch device. In this example, the feature contains a "properties" dictionary that includes the longitude and latitude data retrieved from the iwatch_data variable.
+`attributes`: This is a dictionary of key-value pairs that represent metadata about the iWatch device. In this example, the attributes include the heart rate, timestamp, longitude, and latitude data retrieved from the iwatch_data variable.
 
 # Test if the digital twin is being updated
 To see if the twin is being updated with the data send by script we can run the following:
