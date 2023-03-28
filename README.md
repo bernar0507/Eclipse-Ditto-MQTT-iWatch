@@ -1,5 +1,5 @@
 # Eclipse-Ditto-MQTT-iWatch
-This example presents how to configure Ditto to be able update things via MQTT. In this example we will create a iWatch (thing) in Ditto, it will be updated via MQTT.
+This example presents how to configure Ditto to be able update things via MQTT. In this example we will create a iWatch from a WoT TM (Web of Things Thing Model). Our Digital Twin it will be updated via MQTT.
 
 # Requirements
 1. Clone Ditto: ```git clone https://github.com/eclipse-ditto/ditto.git```
