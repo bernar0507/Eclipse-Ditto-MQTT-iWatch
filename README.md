@@ -211,6 +211,16 @@ ditto_data = {
 
 `attributes`: This is a dictionary of key-value pairs that represent metadata about the iWatch device. In this example, the attributes include the heart rate, timestamp, longitude, and latitude data retrieved from the iwatch_data variable.
 
+# Run Script
+Now that we have everything setup, we can run the script:
+``` 
+cd iwatch
+```
+
+```
+python3 send_data_iwatch.py
+```
+
 # Test if the digital twin is being updated
 To see if the twin is being updated with the data send by script we can run the following:
 ```
