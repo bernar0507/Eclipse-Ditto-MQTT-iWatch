@@ -175,9 +175,9 @@ ditto_data = {
             "timestamp":iwatch_data['timestamp'],
             "longitude":iwatch_data['longitude'],
             "latitude":iwatch_data['latitude']
-            }
         }
     }
+}
 ```
 
 
