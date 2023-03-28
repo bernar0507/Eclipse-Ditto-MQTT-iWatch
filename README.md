@@ -69,6 +69,7 @@ curl -X PUT 'http://localhost:8080/api/2/policies/org.Iotp2c:policy' -u 'ditto:d
 
 
 # Create the Thing
+We will use a WoT (Web of Things) Thing model to create our Digital Twin
 ```
 curl --location --request PUT -u ditto:ditto 'http://localhost:8080/api/2/things/org.Iotp2c:iwatch' \
   --header 'Content-Type: application/json' \
