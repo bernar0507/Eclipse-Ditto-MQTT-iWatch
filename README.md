@@ -70,31 +70,12 @@ curl -X PUT 'http://localhost:8080/api/2/policies/org.Iotp2c:policy' -u 'ditto:d
 
 # Create the Thing
 ```
-curl -X PUT 'http://localhost:8080/api/2/things/org.Iotp2c:iwatch' -u 'ditto:ditto' -H 'Content-Type: application/json' -d '{
-    "policyId": "org.Iotp2c:policy",
-    "attributes": {
-        "name": "iwatch",
-        "type": "iwatch"
-    },
-    "features": {
-        "vital_signs": {
-            "properties": {
-                "heart_rate": 0
-            }
-        },
-        "timestamp": {
-            "properties": {
-                "value": "1970-01-01T00:00:00.000Z"
-            }
-        },
-        "location": {
-            "properties": {
-                "longitude": 0,
-                "latitude": 0
-            }
-        }
-    }
-}'
+curl --location --request PUT -u ditto:ditto 'http://localhost:8080/api/2/things/org.Iotp2c:iwatch' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+      "policyId": "org.Iotp2c:policy",
+      "definition": "https://raw.githubusercontent.com/bernar0507/Eclipse-Ditto-MQTT-iWatch/main/iwatch/wot/iwatch.tm.jsonld"
+  }'
 ```
 
 # Create a MQTT Connection
