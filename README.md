@@ -157,6 +157,22 @@ curl -X POST \
 }'
 ```
 
+# Before running the script
+We will need to install the necessary libraries in python. 
+We have a bash script in the folder `requirements`.
+To install the requirements you will need to:
+```
+cd requirements
+```
+
+```
+chmod +x script_name.sh
+```
+
+```
+bash ./install_requirements.sh
+```
+
 # Payload mapping
 Depending on your IoT-Device, you may have to map the payload that you send to Eclipse Ditto. Because IoT-Devices are often limited due to their memory, it's reasonable not to send fully qualified Ditto-Protocol messages from the IoT-Device. 
 In this case, the function that simulates the data generated from an iWatch sends a dictionary with the data from iWatch.
