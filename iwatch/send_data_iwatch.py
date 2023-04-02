@@ -4,7 +4,7 @@ import iwatch_simulator
 import time
 
 # Replace with your own values
-MQTT_BROKER_ADDRESS = "IP_ADDRESS_MQTT"
+MQTT_BROKER_ADDRESS = "172.18.0.10" #"IP_ADDRESS_MQTT"
 MQTT_BROKER_PORT = 1883
 THING_ID = "org.Iotp2c:iwatch"
 MQTT_TOPIC = f"{THING_ID}/things/twin/commands/modify"
