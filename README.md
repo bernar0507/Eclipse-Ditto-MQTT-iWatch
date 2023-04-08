@@ -20,7 +20,7 @@ git checkout tags/3.0.0
 ```
 
 ```
-cd ditto/deployment/docker
+cd deployment/docker
 ```
 
 ```
