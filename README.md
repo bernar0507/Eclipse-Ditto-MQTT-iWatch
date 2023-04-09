@@ -80,8 +80,8 @@ curl --location --request PUT -u ditto:ditto 'http://localhost:8080/api/2/things
 ```
 
 # Create a MQTT Connection
-We need to get the Mosquitto Ip adress from the container running mosquitto. 
-For that we need to use this to get the container id:
+We need to get the Mosquitto Ip Adress from the container running Mosquitto. 
+For that we need to use this to get the container ip:
 ```
 mosquitto_ip=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mosquitto)
 ```
