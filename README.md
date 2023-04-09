@@ -166,7 +166,7 @@ cd requirements
 ```
 
 ```
-chmod +x script_name.sh
+chmod +x install_requirements.sh
 ```
 
 ```
