@@ -29,10 +29,13 @@ def send_data_to_ditto(iwatch_data):
     client.on_connect = on_connect
     client.on_disconnect = on_disconnect
     client.on_publish = on_publish
+    
+    # Get the IP address of the MQTT broker
+    broker_ip = socket.gethostbyname("mosquitto")
 
     # Connect to the MQTT broker
     client.username_pw_set(username='ditto', password='ditto')
-    client.connect(MQTT_BROKER_ADDRESS, MQTT_BROKER_PORT, 60)
+    client.connect(broker_ip, MQTT_BROKER_PORT, 60)
 
     # Prepare the Ditto command payload
     ditto_data = {
