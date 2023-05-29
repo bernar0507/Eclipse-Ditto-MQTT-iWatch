@@ -38,7 +38,6 @@ def send_data_to_ditto(iwatch_data):
 
     # Configure SSL/TLS
     ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
-    ssl_context.load_cert_chain(certfile="/app/Eclipse-Ditto-MQTT-iWatch/mosquitto/certs/server.crt", keyfile="/app/Eclipse-Ditto-MQTT-iWatch/mosquitto/certs/server.key")
     ssl_context.load_cert_chain(certfile=CLIENT_CERT_PATH, keyfile=CLIENT_KEY_PATH)
 
     # Connect to the MQTT broker with SSL/TLS and the generated key and certificate
