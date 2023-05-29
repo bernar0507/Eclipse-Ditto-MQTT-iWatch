@@ -34,14 +34,16 @@ def send_data_to_ditto(iwatch_data):
     broker_ip = socket.gethostbyname("mosquitto")
 
     # Configure SSL/TLS
-    ssl_context = ssl.create_default_context()
-    ssl_context.check_hostname = False
-    ssl_context.verify_mode = ssl.CERT_NONE
+    ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
+    ssl_context.load_cert_chain(certfile="/app/Eclipse-Ditto-MQTT-iWatch/mosquitto/certs/server.crt", keyfile="/app/Eclipse-Ditto-MQTT-iWatch/mosquitto/certs/server.key")
 
-    # Connect to the MQTT broker with SSL/TLS
+    # Connect to the MQTT broker with SSL/TLS and the generated key and certificate
     client.tls_set_context(ssl_context)
-    client.tls_insecure_set(True)
+
+    # Set username and password
     client.username_pw_set(username='ditto', password='ditto')
+
+    # Connect to the MQTT broker
     client.connect(broker_ip, MQTT_BROKER_PORT, 60)
 
     # Prepare the Ditto command payload
