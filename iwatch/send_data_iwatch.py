@@ -11,6 +11,9 @@ MQTT_BROKER_PORT = 8883  # SSL/TLS port
 THING_ID = "org.Iotp2c:iwatch"
 MQTT_TOPIC = f"{THING_ID}/things/twin/commands/modify"
 
+# Path to client certificate and key
+CLIENT_CERT_PATH = "/app/Eclipse-Ditto-MQTT-iWatch/mosquitto/certs/client.crt"
+CLIENT_KEY_PATH = "/app/Eclipse-Ditto-MQTT-iWatch/mosquitto/certs/client.key"
 
 def on_connect(client, userdata, flags, rc):
     print("Connected to MQTT broker with result code " + str(rc))
@@ -36,6 +39,7 @@ def send_data_to_ditto(iwatch_data):
     # Configure SSL/TLS
     ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
     ssl_context.load_cert_chain(certfile="/app/Eclipse-Ditto-MQTT-iWatch/mosquitto/certs/server.crt", keyfile="/app/Eclipse-Ditto-MQTT-iWatch/mosquitto/certs/server.key")
+    ssl_context.load_cert_chain(certfile=CLIENT_CERT_PATH, keyfile=CLIENT_KEY_PATH)
 
     # Connect to the MQTT broker with SSL/TLS and the generated key and certificate
     client.tls_set_context(ssl_context)
