@@ -4,27 +4,23 @@ import iwatch_simulator
 import time
 import os
 import socket
-import ssl
 
 # Replace with your own values
-MQTT_BROKER_PORT = 8883  # SSL/TLS port
+MQTT_BROKER_PORT = 1883
 THING_ID = "org.Iotp2c:iwatch"
 MQTT_TOPIC = f"{THING_ID}/things/twin/commands/modify"
 
+
 def on_connect(client, userdata, flags, rc):
-    print("Connected to MQTT broker with result code " + str(rc))
+    print("Connected to MQTT broker with result code "+str(rc))
 
 def on_disconnect(client, userdata, rc):
-    print("Disconnected from MQTT broker with result code " + str(rc))
+    print("Disconnected from MQTT broker with result code "+str(rc))
 
 def on_publish(client, userdata, mid):
-    print("Message published to " + MQTT_TOPIC)
+    print("Message published to "+MQTT_TOPIC)
 
 def send_data_to_ditto(iwatch_data):
-    # Set up the SSL/TLS context
-    ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
-    ssl_context.load_cert_chain(certfile="broker.crt")  # Replace with the path to your certificate file
-
     # Create a MQTT client instance
     client = mqtt.Client()
 
@@ -32,9 +28,6 @@ def send_data_to_ditto(iwatch_data):
     client.on_connect = on_connect
     client.on_disconnect = on_disconnect
     client.on_publish = on_publish
-    
-    # Configure SSL/TLS
-    client.tls_set_context(ssl_context)
     
     # Get the IP address of the MQTT broker
     broker_ip = socket.gethostbyname("mosquitto")
