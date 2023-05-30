@@ -37,7 +37,7 @@ def send_data_to_ditto(iwatch_data):
     broker_ip = socket.gethostbyname("mosquitto")
 
     # Configure SSL/TLS
-    ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
+    ssl_context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
     ssl_context.load_cert_chain(certfile=CLIENT_CERT_PATH, keyfile=CLIENT_KEY_PATH)
 
     # Connect to the MQTT broker with SSL/TLS and the generated key and certificate
