@@ -43,6 +43,9 @@ def send_data_to_ditto(iwatch_data):
     # Connect to the MQTT broker with SSL/TLS and the generated key and certificate
     client.tls_set_context(ssl_context)
 
+    # test self certificate
+    client.tls_insecure_set(True)
+    
     # Set username and password
     client.username_pw_set(username='ditto', password='ditto')
 
